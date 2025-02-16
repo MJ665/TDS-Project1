@@ -1,0 +1,13 @@
+docker build -t mj665/your-image-name .
+docker run -e AIPROXY_TOKEN=$AIPROXY_TOKEN -p 8000:8000 -v $(pwd)/data:/data mj665/your-image-name
+
+
+docker build -t mj665/tds-project-1 .
+docker run -e AIPROXY_TOKEN="eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIyZjMwMDE1NTFAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.BkF49EwczoSdCZlFVYsjSxDEoqI3An374-K86-0p-Mw" -p 8000:8000  mj665/tds-project-1
+OPENAI_API_KEY="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" python evaluate.py --email "22f3001551@ds.study.iitm.ac.in"
+
+
+ OPENAI_API_KEY=$AIPROXY_TOKEN uv run ./evaluate.py       
+ OPENAI_API_KEY=$CHATGPT uv run ./evaluate.py       
+
+ AIPROXY_TOKEN=eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIyZjMwMDE1NTFAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.BkF49EwczoSdCZlFVYsjSxDEoqI3An374-K86-0p-Mw
